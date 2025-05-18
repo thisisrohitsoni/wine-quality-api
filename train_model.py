@@ -4,7 +4,7 @@ from sklearn.ensemble import RandomForestClassifier
 import joblib
 
 # Load dataset
-df = pd.read_csv("winequality-red.csv", sep=';')
+df = pd.read_csv("winequality-red.csv", sep=";", quotechar='"')
 
 # Convert quality to category
 df['quality'] = pd.cut(df['quality'], bins=[0, 4, 6, 10], labels=['low', 'medium', 'high'])
